@@ -1,33 +1,20 @@
-# Webcam ASCII Art Converter
+# Webcam ASCII art in the terminal
 
-This Python application captures video from your webcam and converts it to real-time ASCII art. The program uses OpenCV for webcam capture and converts each frame into ASCII characters that are displayed in the terminal. The ASCII art automatically adjusts to your terminal window size!
+`ascii_webcam.py` reads a webcam with OpenCV and prints each frame as ASCII that follows the terminal width. Press `s` to save the current frame, `t` for a 3-second countdown and then a save, or `q` to quit.
 
-## Requirements
-- Python 3.8+
-- Webcam
-- Terminal
+It imports `termios` and `tty`, so it runs in a Unix terminal. It does not run on Windows.
 
-## Installation
-1. Clone this repository
-2. Create and activate virtual environment:
+## Run it
+
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # On Unix/macOS
-# or
-.\venv\Scripts\activate  # On Windows
-```
-3. Install the required dependencies:
-```bash
+source venv/bin/activate
 pip install -r requirements.txt
-```
-
-## Usage
-Run the main script:
-```bash
 python ascii_webcam.py
 ```
 
-### Controls
-- Press 'q' to quit the application
-- Press 's' to save the current ASCII frame
-- Resize your terminal window to adjust the ASCII art resolution!
+`requirements.txt` is `opencv-python`, `numpy`, and `Pillow`.
+
+## License
+
+[MIT](LICENSE)
